@@ -1,0 +1,25 @@
+<div class="jumbotron" style="opacity: 0.85;">
+    <h1 class="display-4" style="text-align: center;"><b>HerrHer Music</b></h1>
+    <p class="lead" style="text-align: center;">Tu destino para instrumentos musicales y accesorios de alta calidad</p>
+    <hr class="my-4">
+    <p style="font-size: 25px;">En HerrHer Music, compartimos tu pasión por la música. Cada instrumento y 
+        accesorio que ofrecemos está diseñado para inspirar y mejorar tu experiencia musical</p>
+</div>
+<div class="row">
+    {{#each read}}
+        <div class="col-md-3" >
+            <div class="card" >
+                <img class="card-img-top" src="{{imagenUrl}}" alt="Card image cap" style="height: 150px;">
+                <div class="card-body">
+                    <h4 class="card-title d-flex justify-content-between align-item-center" >
+                        {{ title }} 
+                    </h4>
+                    <p><b>Descripcion del instrumento:</b><br> {{ description }}</p>
+                    <p><b>Precio del instrumento: </b>${{precio}}</p>
+                    
+                </div>
+            </div>
+            <br>
+        </div>
+    {{/each}}
+</div>

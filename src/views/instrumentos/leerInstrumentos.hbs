@@ -1,0 +1,36 @@
+<div class="jumbotron" style="opacity: 0.85;">
+    <h1 class="display-4" style="text-align: center;"><b>HerrHer Music</b></h1>
+    <p class="lead" style="text-align: center;">Tu destino para instrumentos musicales y accesorios de alta calidad</p>
+    <hr class="my-4">
+    <p style="font-size: 25px;">En HerrHer Music, compartimos tu pasión por la música. Cada instrumento y 
+        accesorio que ofrecemos está diseñado para inspirar y mejorar tu experiencia musical</p>
+</div>
+<div class="row">
+    {{#each read}}
+        <div class="col-md-3">
+            <div class="card" >
+                <img class="card-img-top" src="{{imagenUrl}}" alt="Card image cap" style="height: 150px;">
+                <div class="card-body" >
+                    <h4 class="card-title d-flex justify-content-between align-item-center" >
+                        {{ title }} <a href="/instrumentos/editar/{{_id}}"><i class="ri-edit-fill"></i></a>
+                    </h4>
+                    <p><b>Descripcion del instrumento:</b><br> {{ description }}</p>
+                    <p><b>Precio del instrumento: </b>${{precio}}</p>
+                    <form action="/instrumentos/eliminar/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button class="btn btn-danger btn-block btn-sm" type="submit">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+            <br>
+        </div>
+    {{else}}
+        <div class="card mx-auto" style="width: 600px;">
+            <div class="card-body">
+                <h1 style="text-align: center;">Bienvenido {{user.name}}!</h1>
+                <p class="lead" style="text-align: center;">Aun no hay instrumentos agregados, agrega uno para verlo</p>
+                <a href="/instrumentos/agregar" class="btn btn-success btn-block"> Agregar Instrumento</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

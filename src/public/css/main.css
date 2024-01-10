@@ -1,0 +1,24 @@
+body{
+    background: #283c86;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-image: url("https://img.freepik.com/foto-gratis/tambores-guitarra-acustica-teclas-sobre-fondo-negro_169016-29747.jpg?w=1060&t=st=1702226276~exp=1702226876~hmac=7757623da265ff68a1c2a1120ac5644d4faba43356d7964946ed733284096b20");
+}
+
+/*Codigo para el diseño web Responsivo*/
+@media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+
+    section {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 900px) {
+    section {
+      flex-direction: row;
+    }
+  }

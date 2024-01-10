@@ -1,0 +1,30 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Edita la informacion del instrumento</h3>
+        </div>
+        <div class="card-body">
+            <form action="/instrumentos/editarInstrumentos/{{encontrarId._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Titulo"
+                    value="{{encontrarId.title}}">
+                </div>
+                <div class="form-group">
+                    <textarea name="description" class="form-control">{{encontrarId.description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="precio" class="form-control" placeholder="Precio"
+                    value="{{encontrarId.precio}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="imagenUrl" class="form-control" placeholder="Url de imagen"
+                    value="{{encontrarId.imagenURL}}">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
